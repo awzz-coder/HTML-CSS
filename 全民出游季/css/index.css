@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: url(../images/f1_1.jpg) no-repeat center 0;
+
+  /* 缩放背景图 */
+  /* contain 图片等比例缩放 当宽度或者高度与盒子尺寸相等便不在缩放
+  cover ；能够保证图片覆盖整个背景 但是可能导致图片不完整 */
+  background-size: cover;
+  position: relative;
+}
+
+/* 1.img 引入图片 控制图片位置 */
+/* 2.定义并使用动画 */
+.cloud img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+.cloud img:nth-child(1) {
+  margin-left: -200px;
+  top: 20px;
+  animation: cloud 1.5s infinite alternate;
+}
+
+.cloud img:nth-child(2) {
+  margin-left: 400px;
+  top: 100px;
+  animation: cloud 1s infinite alternate 0.2s;
+}
+
+.cloud img:nth-child(3) {
+  margin-left: -550px;
+  top: 200px;
+  animation: cloud 1.5s infinite alternate 0.4s;
+}
+
+/* 2.定义动画 */
+@keyframes cloud {
+  to {
+    transform: translateX(20px);
+  }
+}
+
+.lu img {
+  position: absolute;
+  left: 59%;
+  top: 100px;
+}
+
+.ad img {
+  position: absolute;
+  width: 500px;
+  left: 34%;
+  top: 280px;
+}
+
+.hot img {
+  position: absolute;
+  left: 27%;
+  top: 100px;
+  animation: hot 1s infinite alternate;
+}
+
+@keyframes hot {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.discount img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100px;
+}
+
+.discount img:nth-child(1) {
+  margin-left: -300px;
+  top: 580px;
+  animation: ad 1s infinite alternate;
+}
+
+.discount img:nth-child(2) {
+  margin-left: -130px;
+  top: 580px;
+  animation: ad 1s infinite alternate;
+}
+
+.discount img:nth-child(3) {
+  margin-left: 30px;
+  top: 580px;
+  animation: ad 1s infinite alternate;
+}
+
+.discount img:nth-child(4) {
+  margin-left: 170px;
+  top: 580px;
+  animation: ad 1s infinite alternate;
+}
+
+@keyframes ad {
+  to {
+    transform: translateY(10px);
+  }
+}
